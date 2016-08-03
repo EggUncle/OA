@@ -1,20 +1,26 @@
 package rixin.app.officeauto.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 import rixin.app.officeauto.R;
+import rixin.app.officeauto.fragment.ContactFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton imgHome;
     private ImageButton imgTools;
     private ImageButton imgContact;
+    private FrameLayout mainFragment;
 
-
+    private FragmentManager fm;
+    private FragmentTransaction transaction;
+    private ContactFragment contactFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.act_main);
         getSupportActionBar().hide();
         initViews();
+        initFragments();
     }
 
     /**
@@ -30,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
      * 为控件附加相应事件方法。
      */
     private void initViews(){
+        mainFragment = (FrameLayout) findViewById(R.id.main_fragment);
         imgHome = (ImageButton) findViewById(R.id.img_home);
         imgHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,5 +56,22 @@ public class MainActivity extends AppCompatActivity {
                 imgHome.setImageDrawable(getResources().getDrawable(R.drawable.tabbar_home));
             }
         });
+
+
+    }
+
+
+    /**
+     * 初始化各种要使用fragment
+     */
+
+    private void initFragments() {
+        contactFragment = new ContactFragment();
+
+        FragmentManager fm = getSupportFragmentManager();
+
+        transaction = fm.beginTransaction();
+        transaction.replace(R.id.main_fragment, contactFragment);
+        transaction.commit();
     }
 }

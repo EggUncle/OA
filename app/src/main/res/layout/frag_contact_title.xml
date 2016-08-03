@@ -1,17 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="@dimen/title_height"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height_index"
+        android:paddingLeft="@dimen/title_padding_left_right"
+        android:paddingRight="@dimen/title_padding_left_right">
 
     <rixin.app.officeauto.myclass.CircleImageView
-        android:layout_width="@dimen/iv_user_icon_width"
-        android:layout_height="@dimen/iv_user_icon_height"
+        android:id="@+id/title_iv_icon"
+        android:layout_width="@dimen/title_iv_user_icon_height"
         android:src="@mipmap/ic_launcher"
+        android:layout_height="@dimen/title_iv_user_icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/title_padding_left_right"
         />
 
-    <RadioButton
-        android:layout_width=""
-        android:layout_height="" />
+        <Switch
+            android:id="@+id/title_switch"
+            android:layout_width="@dimen/title_switch_width"
+            android:layout_height="@dimen/title_switch_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_switch_bg"
+            android:thumb="@null"
+            android:track="@null" />
+
+        <ImageButton
+
+            android:id="@+id/title_img_menu"
+            android:layout_width="@dimen/title_img_menu_width"
+            android:layout_height="@dimen/title_img_menu_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00ffffff"
+            android:src="@drawable/contact_navbar_add" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSearchBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/title_padding_top_bottom"
+        android:paddingLeft="@dimen/title_padding_left_right"
+        android:paddingRight="@dimen/title_padding_left_right"
+        android:paddingTop="@dimen/title_padding_top_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/title_search_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/contact_message_searchbar_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/title_padding_left_right"
+                android:text="@string/title_search" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="@dimen/title_searchbar_width"
+            android:layout_height="@dimen/title_searchbar_height"
+            android:background="#00ffffff"
+            android:src="@drawable/contact_searchbar_select" />
+
+    </LinearLayout>
 
 </LinearLayout>

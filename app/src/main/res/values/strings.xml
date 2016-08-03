@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OA</string>
+    <string name="title_search">搜索</string>
 </resources>

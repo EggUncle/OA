@@ -14,7 +14,15 @@
     <!--联系人页面标题栏-->
     <dimen name="title_iv_user_icon_height">40dp</dimen>
     <dimen name="title_iv_user_icon_width">40dp</dimen>
-    <dimen name="title_radbtn_width">108dp</dimen>
-    <dimen name="title_radbtn_height">20dp</dimen>
-
+    <dimen name="title_switch_width">108dp</dimen>
+    <dimen name="title_switch_height">25dp</dimen>
+    <dimen name="title_img_menu_width">40dp</dimen>
+    <dimen name="title_img_menu_height">40dp</dimen>
+    <dimen name="title_height">90dp</dimen>
+    <dimen name="title_height_index">50dp</dimen>
+    <dimen name="title_padding_left_right">10dp</dimen>
+    <dimen name="title_padding_top_bottom">5dp</dimen>
+    <dimen name="title_searchbar_height">25dp</dimen>
+    <dimen name="title_searchbar_width">25dp</dimen>
+    
 </resources>
