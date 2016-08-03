@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <LinearLayout
+        android:background="@drawable/main_bottom_bg"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/main_bottom_top_interval"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bottom_height"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_marginTop="@dimen/main_bottom_top_interval"
+            android:layout_weight="1"
+            android:layout_width="@dimen/main_bottom_btn_height"
+            android:layout_height="@dimen/main_bottom_btn_width"
+            android:id="@+id/img_home"
+            android:src="@drawable/tabbar_home"
+            android:background="#00ffffff"
+            />
+        <ImageButton
+            android:layout_marginTop="@dimen/main_bottom_top_interval"
+            android:layout_weight="1"
+            android:layout_width="@dimen/main_bottom_btn_height"
+            android:layout_height="@dimen/main_bottom_btn_width"
+            android:id="@+id/img_tools"
+            android:src="@drawable/tabbar_tools"
+            android:background="#00ffffff"
+            />
+        <ImageButton
+            android:layout_marginTop="@dimen/main_bottom_top_interval"
+            android:layout_weight="1"
+            android:layout_width="@dimen/main_bottom_btn_height"
+            android:layout_height="@dimen/main_bottom_btn_width"
+            android:id="@+id/img_contact"
+            android:src="@drawable/tabbar_contact"
+            android:background="#00ffffff"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
