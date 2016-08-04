@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_contact_message_height"
+    android:orientation="horizontal"
+    android:padding="@dimen/item_contact_padding">
+
+    <rixin.app.officeauto.myclass.CircleImageView
+        android:id="@+id/iv_contact_icon"
+        android:layout_width="@dimen/item_contact_message_icon_width"
+        android:layout_height="@dimen/item_contact_message_height"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_contact_padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_contact_name"
+                android:textSize="@dimen/item_contact_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_contact_time"
+                android:textColor="@color/colorTextColor"
+                android:textSize="@dimen/item_contact_time_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_contact_padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_contact_content"
+                android:textColor="@color/colorTextColor"
+                android:textSize="@dimen/item_contact_message_font_size" />
+
+            <TextView
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:id="@+id/tv_contact_message_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contact_message_sign"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
