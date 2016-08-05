@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/item_contact_padding"
+    android:paddingRight="@dimen/item_contact_padding"
+
+
+    android:orientation="vertical">
+    <!-- 这个TextView就是显示字母的 -->
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_indexes_height"
+        android:background="@color/colorSearchBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/item_contact_padding"
+        android:text="Z"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <rixin.app.officeauto.myclass.CircleImageView
+            android:id="@+id/iv_contact_book_icon"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/item_contact_message_icon_width"
+            android:layout_height="@dimen/item_contact_message_height"
+            android:src="@mipmap/ic_launcher" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_lv_item_head"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/view_lv_item_line"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+
+        <TextView
+            android:textSize="@dimen/item_contact_font_size"
+            android:id="@+id/tv_contact_book_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/item_contact_padding"
+            android:layout_toRightOf="@id/iv_contact_book_icon"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

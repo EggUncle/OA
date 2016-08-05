@@ -30,7 +30,6 @@
             android:track="@null" />
 
         <ImageButton
-
             android:id="@+id/title_img_menu"
             android:layout_width="@dimen/title_img_menu_width"
             android:layout_height="@dimen/title_img_menu_height"

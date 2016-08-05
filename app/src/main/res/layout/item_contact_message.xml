@@ -2,11 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_contact_message_height"
+    android:clickable="true"
+    android:foreground="@drawable/item_foreground"
     android:orientation="horizontal"
-    android:padding="@dimen/item_contact_padding">
+    android:paddingLeft="@dimen/item_contact_padding"
+    android:paddingRight="@dimen/item_contact_padding"
+    android:paddingBottom="@dimen/item_contact_padding"
+    android:paddingTop="@dimen/item_contact_padding"
+    >
+
 
     <rixin.app.officeauto.myclass.CircleImageView
         android:id="@+id/iv_contact_icon"
+        android:scaleType="fitXY"
         android:layout_width="@dimen/item_contact_message_icon_width"
         android:layout_height="@dimen/item_contact_message_height"
         android:src="@mipmap/ic_launcher" />
@@ -48,7 +56,7 @@
             android:paddingLeft="@dimen/item_contact_padding">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/tv_contact_content"
@@ -58,6 +66,7 @@
             <TextView
                 android:textColor="#ffffff"
                 android:gravity="center"
+                android:text="1"
                 android:id="@+id/tv_contact_message_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,3 +80,4 @@
 
 
 </LinearLayout>
+

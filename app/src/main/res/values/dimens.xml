@@ -34,4 +34,14 @@
     <dimen name="item_contact_time_font_size">12sp</dimen>
     <dimen name="item_contact_padding">10dp</dimen>
 
+    <!--消息目录-->
+    <dimen name="frag_contact_divide">10dp</dimen>
+
+    <!--联系人列表-->
+    <dimen name="three_button_height">105dp</dimen>
+    <dimen name="three_button_padding_left_right">40dp</dimen>
+    <dimen name="three_button_padding_top_bottom">20dp</dimen>
+    <dimen name="item_indexes_height">20dp</dimen>
+    
+
 </resources>

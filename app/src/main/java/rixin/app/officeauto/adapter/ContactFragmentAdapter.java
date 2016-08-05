@@ -21,7 +21,7 @@ public class ContactFragmentAdapter  extends FragmentStatePagerAdapter {
     }
 
     private void init(Context context) {
-        fragments[0] = new ContactFragment();
+        fragments[0] = new ContactFragment(context);
 
     }
 

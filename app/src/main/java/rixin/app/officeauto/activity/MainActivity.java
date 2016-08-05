@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 imgContact.setImageDrawable(getResources().getDrawable(R.drawable.tabbar_contact_highlighted));
                 imgHome.setImageDrawable(getResources().getDrawable(R.drawable.tabbar_home));
+                transaction = fm.beginTransaction();
+                transaction.replace(R.id.main_fragment, contactFragment);
+                transaction.commit();
+
             }
         });
 
@@ -66,12 +70,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private void initFragments() {
-        contactFragment = new ContactFragment();
+        contactFragment = new ContactFragment(this);
 
-        FragmentManager fm = getSupportFragmentManager();
+         fm = getSupportFragmentManager();
 
-        transaction = fm.beginTransaction();
-        transaction.replace(R.id.main_fragment, contactFragment);
-        transaction.commit();
+
     }
 }
