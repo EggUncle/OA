@@ -19,6 +19,8 @@
         android:visibility="visible" />
 
     <RelativeLayout
+        android:clickable="true"
+        android:foreground="@drawable/item_foreground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

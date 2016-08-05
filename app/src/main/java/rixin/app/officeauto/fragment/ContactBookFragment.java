@@ -20,16 +20,18 @@ import rixin.app.officeauto.R;
 import rixin.app.officeauto.adapter.ContactBookRecycleAdapter;
 import rixin.app.officeauto.myclass.PersonBean;
 import rixin.app.officeauto.myclass.RecycleViewDivider;
+import rixin.app.officeauto.myclass.XCRecyclerView;
 import rixin.app.officeauto.util.PinyinComparator;
 import rixin.app.officeauto.util.PinyinUtils;
-import rixin.app.officeauto.util.SideBar;
+
 
 /**
  * Created by egguncle on 16.8.3.
  */
 public class ContactBookFragment extends Fragment{
     private View view;
-    private RecyclerView recyclerView;
+    private View headView;
+    private XCRecyclerView recyclerView;
 
 
     private List<PersonBean> data;
@@ -49,6 +51,7 @@ public class ContactBookFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag_contact_book, null);
+        headView = inflater.inflate(R.layout.frag_contact_book_title,null);
         initView();
 
 
@@ -102,7 +105,8 @@ public class ContactBookFragment extends Fragment{
     }
 
     private void initView() {
-        recyclerView = (RecyclerView) view.findViewById(R.id.rcv_book);
+        recyclerView = (XCRecyclerView) view.findViewById(R.id.rcv_book);
+        recyclerView.addHeaderView(headView);
     }
 
     private List<PersonBean> getData(String[] data) {

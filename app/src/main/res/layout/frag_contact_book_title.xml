@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/three_button_height"
+    android:paddingBottom="@dimen/three_button_padding_top_bottom"
+    android:paddingTop="@dimen/three_button_padding_top_bottom">
+<LinearLayout
+
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:clickable="true"
+        android:foreground="@drawable/item_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/contact_book_wodebumen" />
+
+    <ImageView
+        android:clickable="true"
+        android:foreground="@drawable/item_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/contact_book_zuzhijiagou" />
+
+    <ImageView
+        android:clickable="true"
+        android:foreground="@drawable/item_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/contact_book_wodequnzu" />
+
+</LinearLayout>
+
+</RelativeLayout>
