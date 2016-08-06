@@ -32,8 +32,6 @@ public class ContactFragment extends Fragment {
     private FragmentTransaction transaction;
     private ContactMessageFragment contactMessageFragment;
     private ContactBookFragment contactBookFragment;
-
-    private List<Msg> noticeData;
     private List<Msg> messageData;
 
     private CircleImageView titleIvIcon;
@@ -94,11 +92,10 @@ public class ContactFragment extends Fragment {
     }
 
     private void initVar() {
-        contactMessageFragment = new ContactMessageFragment(context, noticeData, messageData);
+        contactMessageFragment = new ContactMessageFragment(context,messageData);
         contactBookFragment = new ContactBookFragment(context);
         fm = getChildFragmentManager();
         transaction = fm.beginTransaction();
-     //   transaction.replace(R.id.fragment_contact, contactMessageFragment);
         transaction.replace(R.id.fragment_contact, contactBookFragment);
         transaction.commit();
     }
@@ -106,17 +103,7 @@ public class ContactFragment extends Fragment {
 
     //设置模拟数据测试模块效果
     private void setSimulationData() {
-        noticeData = new ArrayList<>();
         messageData = new ArrayList<>();
-
-        for (int i = 0; i < 2; i++) {
-            Msg msg = new Msg();
-            msg.setStrContent("content" + " " + i);
-            msg.setStrName("name" + " " + i);
-            msg.setStrDate("date" + " " + i);
-            noticeData.add(msg);
-        }
-
         for (int i = 0; i < 10; i++) {
             Msg msg = new Msg();
             msg.setStrContent("content" + " " + i);

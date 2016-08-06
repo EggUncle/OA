@@ -6,44 +6,20 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcv_frag_contact_message_notice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/item_contact_padding"
-                android:paddingLeft="@dimen/item_contact_padding"
-                android:paddingRight="@dimen/item_contact_padding"
-                android:paddingTop="@dimen/item_contact_padding"
-                app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/item_contact_message"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/frag_contact_divide"
-                android:background="@color/colorSearchBackground" />
 
-            <android.support.v7.widget.RecyclerView
+
+            <rixin.app.officeauto.myclass.XCRecyclerView
                 android:id="@+id/rcv_frag_contact_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingBottom="@dimen/item_contact_padding"
-                android:paddingLeft="@dimen/item_contact_padding"
-                android:paddingRight="@dimen/item_contact_padding"
-                android:paddingTop="@dimen/item_contact_padding"
+
                 app:layoutManager="LinearLayoutManager"
                 tools:listitem="@layout/item_contact_message"/>
-        </LinearLayout>
-    </ScrollView>
+
+
 
 
 </LinearLayout>

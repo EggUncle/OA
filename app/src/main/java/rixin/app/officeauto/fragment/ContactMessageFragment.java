@@ -16,29 +16,27 @@ import rixin.app.officeauto.R;
 import rixin.app.officeauto.adapter.ContactMessageRecycleAdapter;
 import rixin.app.officeauto.myclass.Msg;
 import rixin.app.officeauto.myclass.RecycleViewDivider;
+import rixin.app.officeauto.myclass.XCRecyclerView;
 
 /**
  * Created by egguncle on 16.8.3.
  */
 public class ContactMessageFragment extends Fragment {
     private View view;
+    private View headView;
     private Context context;
-    private RecyclerView rcvFragContactMessageNotice;
-    private RecyclerView rcvFragContactMessage;
+    private XCRecyclerView rcvFragContactMessage;
 
-    private ContactMessageRecycleAdapter noticeAdapter;
     private ContactMessageRecycleAdapter messageAdapter;
-    private List<Msg> noticeData;
     private List<Msg> messageData;
 
-//    public ContactMessageFragment() {
-//
-//    }
+    public ContactMessageFragment() {
+
+    }
 
 
-    public ContactMessageFragment(Context context, List<Msg> noticeData, List<Msg> messageData) {
+    public ContactMessageFragment(Context context, List<Msg> messageData) {
         this.context = context;
-        this.noticeData = noticeData;
         this.messageData = messageData;
     }
 
@@ -51,24 +49,20 @@ public class ContactMessageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag_contact_message, null);
+        headView = inflater.inflate(R.layout.farg_contact_message_title,null);
         initViews();
         initVars();
         return view;
     }
 
     private void initViews() {
-        rcvFragContactMessageNotice = (RecyclerView) view.findViewById(R.id.rcv_frag_contact_message_notice);
-        rcvFragContactMessage = (RecyclerView) view.findViewById(R.id.rcv_frag_contact_message);
-
-        rcvFragContactMessageNotice.addItemDecoration(new RecycleViewDivider(context, LinearLayoutManager.HORIZONTAL));
+        rcvFragContactMessage = (XCRecyclerView) view.findViewById(R.id.rcv_frag_contact_message);
+        rcvFragContactMessage.addHeaderView(headView);
         rcvFragContactMessage.addItemDecoration(new RecycleViewDivider(context, LinearLayoutManager.HORIZONTAL));
     }
 
     private void initVars() {
-        noticeAdapter = new ContactMessageRecycleAdapter(context, noticeData);
         messageAdapter = new ContactMessageRecycleAdapter(context, messageData);
-
-        rcvFragContactMessageNotice.setAdapter(noticeAdapter);
         rcvFragContactMessage.setAdapter(messageAdapter);
     }
 

@@ -92,7 +92,7 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
     public RecycleViewDivider(Context context, int orientation, int dividerHeight, int
             dividerColor) {
         this(context, orientation);
-        dividerHeight = dividerHeight;
+        this.dividerHeight = dividerHeight;
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(dividerColor);
         paint.setStyle(Paint.Style.FILL);
@@ -122,7 +122,7 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
     private void drawHorizontal(Canvas canvas, RecyclerView parent) {
     //    final int left = parent.getPaddingLeft();
         final int left = parent.getPaddingLeft()+200;
-        final int right = parent.getMeasuredWidth() - parent.getPaddingRight()-50;
+        final int right = parent.getMeasuredWidth() - parent.getPaddingRight()-30;
         final int childSize = parent.getChildCount();
         for (int i = 0; i < childSize; i++) {
             final View child = parent.getChildAt(i);

@@ -32,7 +32,11 @@
     <dimen name="item_contact_font_size">18sp</dimen>
     <dimen name="item_contact_message_font_size">16sp</dimen>
     <dimen name="item_contact_time_font_size">12sp</dimen>
+    <dimen name="item_contact_system_message_height">146dp</dimen>
     <dimen name="item_contact_padding">10dp</dimen>
+    <dimen name="item_contact_system_divider_left">70dp</dimen>
+    <dimen name="item_contact_system_divider_right">10dp</dimen>
+    <dimen name="item_contact_system_divider_height">1dp</dimen>
 
     <!--消息目录-->
     <dimen name="frag_contact_divide">10dp</dimen>
@@ -43,5 +47,9 @@
     <dimen name="three_button_padding_top_bottom">20dp</dimen>
     <dimen name="item_indexes_height">20dp</dimen>
     
+    <!--联系人列表菜单弹窗-->
+    <dimen name="contact_pop_window_width">100dp</dimen>
+    <dimen name="contact_pop_window_height">100dp</dimen>
+    <dimen name="contact_pop_window_padding">10dp</dimen>
 
 </resources>

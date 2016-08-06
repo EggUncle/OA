@@ -7,5 +7,5 @@
     
     <color name="colorSearchBackground">#efefef</color>
     <color name="colorTextColor">#979797</color>
-
+    <color name="colorViewBackground">#dedede</color>
 </resources>
