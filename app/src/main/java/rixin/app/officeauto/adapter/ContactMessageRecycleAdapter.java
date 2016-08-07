@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import rixin.app.officeauto.myclass.Msg;
 
 /**
  * Created by egguncle on 16.8.4.
+ * 用于消息界面的适配器
  */
 public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMessageRecycleAdapter.MyViewHolder> {
 
@@ -38,6 +40,8 @@ public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMe
         holder.tvContactContent.setText(dataMsg.get(position).getStrContent());
         holder.tvContactTime.setText(dataMsg.get(position).getStrDate());
         holder.tvContactMessageNum.setText(11+"");
+
+
     }
 
 
@@ -50,12 +54,12 @@ public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMe
 
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        private CircleImageView ivContactIcon;
-        private TextView tvContactName;
-        private TextView tvContactTime;
-        private TextView tvContactContent;
-        private TextView tvContactMessageNum;
-
+        private CircleImageView ivContactIcon;     //头像
+        private TextView tvContactName;            //名字
+        private TextView tvContactTime;            //消息时间
+        private TextView tvContactContent;         //消息内容
+        private TextView tvContactMessageNum;      //消息数目
+        private LinearLayout lineMessageItem;      //整个列表项
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -64,7 +68,9 @@ public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMe
             tvContactTime = (TextView) itemView.findViewById(R.id.tv_contact_time);
             tvContactContent = (TextView) itemView.findViewById(R.id.tv_contact_content);
             tvContactMessageNum = (TextView) itemView.findViewById(R.id.tv_contact_message_num);
+            lineMessageItem = (LinearLayout) itemView.findViewById(R.id.line_message_item);
         }
+
     }
 
 }

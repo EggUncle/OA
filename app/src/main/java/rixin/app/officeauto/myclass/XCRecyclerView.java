@@ -2,6 +2,7 @@ package rixin.app.officeauto.myclass;
 
 /**
  * Created by egguncle on 16.4.15.
+ * 自定义的recycleview，可以给列表添加头部
  */
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -2,6 +2,7 @@ package rixin.app.officeauto.myclass;
 
 /**
  * Created by egguncle on 16.8.4.
+ * 消息类
  */
 public class Msg {
     private String strDate;

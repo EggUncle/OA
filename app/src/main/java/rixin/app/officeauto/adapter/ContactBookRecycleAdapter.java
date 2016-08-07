@@ -13,6 +13,7 @@ import rixin.app.officeauto.myclass.PersonBean;
 
 /**
  * Created by egguncle on 16.8.5.
+ * 用于联系人界面的适配器
  */
 public class ContactBookRecycleAdapter extends RecyclerView.Adapter<ContactBookRecycleAdapter.ViewHolder> {
     List<PersonBean> data;
@@ -22,8 +23,6 @@ public class ContactBookRecycleAdapter extends RecyclerView.Adapter<ContactBookR
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-//        TextView nickname;
-//        TextView tag;
 
         private TextView tvTag;
         private CircleImageView ivContactBookIcon;
@@ -32,9 +31,6 @@ public class ContactBookRecycleAdapter extends RecyclerView.Adapter<ContactBookR
 
         public ViewHolder(View itemView) {
             super(itemView);
-//            nickname = (TextView) itemView.findViewById(R.id.nickname);
-//            tag = (TextView) itemView.findViewById(R.id.tag);
-
             tvTag = (TextView) itemView.findViewById(R.id.tag);
             ivContactBookIcon = (CircleImageView) itemView.findViewById(R.id.iv_contact_book_icon);
             tvContactBookName = (TextView) itemView.findViewById(R.id.tv_contact_book_name);

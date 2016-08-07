@@ -28,6 +28,7 @@ import rixin.app.officeauto.myclass.Msg;
 
 /**
  * Created by egguncle on 16.8.3.
+ * 联系人界面和消息界面共同的标题栏
  */
 public class ContactFragment extends Fragment {
 
@@ -99,6 +100,7 @@ public class ContactFragment extends Fragment {
         titleImgMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //右上角菜单
                 popupMenu = new PopupMenu(context, titleImgMenu);
                 popupMenu.getMenuInflater().inflate(R.menu.pop_window, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -109,6 +111,7 @@ public class ContactFragment extends Fragment {
                     }
                 });
                 try {
+                    //使用反射来显示图标
                     Class<?> classPopupMenu = Class.forName(popupMenu.getClass()
                             .getName());
                     Field popup = classPopupMenu.getDeclaredField("mPopup");

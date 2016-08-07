@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent">
 
+    <ProgressBar
+        android:id="@+id/contact_message_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        style="@style/Widget.AppCompat.ProgressBar"
+        />
+
     <com.xlf.nrl.NsRefreshLayout
+        android:visibility="invisible"
         app:load_view_bg_color="#6e6e6e"
         app:load_text_color="#ffffff"
         android:id="@+id/contact_message_nrl"
@@ -24,5 +33,5 @@
                 tools:listitem="@layout/item_contact_message"/>
 
     </com.xlf.nrl.NsRefreshLayout>
-</LinearLayout>
+</RelativeLayout>
 

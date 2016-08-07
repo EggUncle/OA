@@ -13,6 +13,7 @@ import android.view.View;
 
 /**
  * Created by egguncle on 16.8.4.
+ * 自定义recycleview分割线
  */
 public class RecycleViewDivider extends RecyclerView.ItemDecoration {
 

@@ -2,6 +2,7 @@ package rixin.app.officeauto.myclass;
 
 /**
  * Created by egguncle on 16.8.5.
+ * 人名类
  */
 public class PersonBean {
 

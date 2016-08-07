@@ -26,12 +26,13 @@ import rixin.app.officeauto.util.PinyinUtils;
 
 /**
  * Created by egguncle on 16.8.3.
+ * 联系人列表界面
  */
 public class ContactBookFragment extends Fragment {
     private View view;
     private View headView;
     private XCRecyclerView recyclerView;
-    private ProgressBar contactProgress;
+    private ProgressBar pbContactBook;
 
     private List<PersonBean> data;
     private ContactBookRecycleAdapter contactAdapter;
@@ -59,7 +60,7 @@ public class ContactBookFragment extends Fragment {
     }
 
     private void initView() {
-        contactProgress = (ProgressBar) view.findViewById(R.id.contact_progress);
+        pbContactBook = (ProgressBar) view.findViewById(R.id.contact_book_progress);
         recyclerView = (XCRecyclerView) view.findViewById(R.id.rcv_book);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
@@ -71,7 +72,7 @@ public class ContactBookFragment extends Fragment {
     }
 
     private void initVars() {
-
+       //用于调试的模拟数据
         data = getData(new String[]{"马云",
                 "马化腾",
                 "佩兰",
@@ -107,9 +108,6 @@ public class ContactBookFragment extends Fragment {
         // 数据在放在adapter之前需要排序
         Collections.sort(data, new PinyinComparator());
         contactAdapter = new ContactBookRecycleAdapter(data);
-
-
-
     }
 
     private List<PersonBean> getData(String[] data) {
@@ -139,7 +137,7 @@ public class ContactBookFragment extends Fragment {
     //第一个参数：启动任务时输入的参数类型.
     //第二个参数：后台任务执行中返回进度值的类型.
     //第三个参数：后台任务执行完成后返回结果的类型.
-    class MyAyncTask extends AsyncTask<Void, Integer, ArrayList<String>> {
+    class MyAyncTask extends AsyncTask<Void, Integer, Void> {
 
 
         public MyAyncTask() {
@@ -148,11 +146,11 @@ public class ContactBookFragment extends Fragment {
 
 
         @Override
-        protected void onPostExecute(ArrayList<String> strings) {
+        protected void onPostExecute(Void v) {
             //执行后返回值
-            super.onPostExecute(strings);
+            super.onPostExecute(v);
             recyclerView.setAdapter(contactAdapter);
-            contactProgress.setVisibility(View.GONE);
+            pbContactBook.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);
         }
 
@@ -171,10 +169,11 @@ public class ContactBookFragment extends Fragment {
         }
 
         @Override
-        protected ArrayList<String> doInBackground(Void... params) {
+        protected Void doInBackground(Void... params) {
             //后台加载时的操作
 
             initVars();
+
             return null;
         }
 
