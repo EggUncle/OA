@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="创建群组"  android:showAsAction="ifRoom|withText" android:icon="@drawable/contact_message_droplist_chuangjianqunzu"/>
+    <item android:title="消息群发"  android:showAsAction="ifRoom|withText" android:icon="@drawable/contact_message_droplist_xiaoxiqunfa"/>
+    <item android:title="扫一扫"  android:showAsAction="ifRoom|withText" android:icon="@drawable/contact_droplist_saoyisao"/>
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="@dimen/contact_pop_window_width"-->
+        <!--android:layout_height="@dimen/contact_pop_window_height"-->
+        <!--android:background="@drawable/title_search_bg"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="@dimen/contact_pop_window_padding">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/contact_message_droplist_chuangjianqunzu" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="创建群组" />-->
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/contact_message_droplist_xiaoxiqunfa" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="消息群发" />-->
+
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/contact_droplist_saoyisao" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="扫一扫" />-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+</menu>

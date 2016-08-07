@@ -1,18 +1,24 @@
 package rixin.app.officeauto.fragment;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
+import android.widget.ProgressBar;
 import android.widget.Switch;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +33,7 @@ public class ContactFragment extends Fragment {
 
     private View view;
     private Context context;
+    private PopupMenu popupMenu;
 
     private FragmentManager fm;
     private FragmentTransaction transaction;
@@ -62,12 +69,14 @@ public class ContactFragment extends Fragment {
 
         //模拟数据
         setSimulationData();
-        initVar();
+
         initView();
+        initVar();
         return view;
     }
 
     private void initView(){
+
         titleIvIcon = (CircleImageView) view.findViewById(R.id.title_iv_icon);
         titleSwitch = (Switch) view.findViewById(R.id.title_switch);
         titleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -86,18 +95,50 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
-
-
         titleImgMenu = (ImageButton) view.findViewById(R.id.title_img_menu);
+        titleImgMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupMenu = new PopupMenu(context, titleImgMenu);
+                popupMenu.getMenuInflater().inflate(R.menu.pop_window, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+
+                        return true;
+                    }
+                });
+                try {
+                    Class<?> classPopupMenu = Class.forName(popupMenu.getClass()
+                            .getName());
+                    Field popup = classPopupMenu.getDeclaredField("mPopup");
+                    popup.setAccessible(true);
+                    Object menuPopupHelper = popup.get(popupMenu);
+                    Class<?> classPopupHelper = Class.forName(menuPopupHelper
+                            .getClass().getName());
+                    Method setForceIcons = classPopupHelper.getMethod(
+                            "setForceShowIcon", boolean.class);
+                    setForceIcons.invoke(menuPopupHelper, true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                popupMenu.show();
+            }
+        });
     }
+
 
     private void initVar() {
         contactMessageFragment = new ContactMessageFragment(context,messageData);
         contactBookFragment = new ContactBookFragment(context);
+
         fm = getChildFragmentManager();
         transaction = fm.beginTransaction();
         transaction.replace(R.id.fragment_contact, contactBookFragment);
         transaction.commit();
+//        transaction.replace(R.id.fragment_contact, contactBookFragment);
+//        transaction.commit();
+
     }
 
 
@@ -111,7 +152,9 @@ public class ContactFragment extends Fragment {
             msg.setStrDate("date" + " " + i);
             messageData.add(msg);
         }
-
-
     }
+
+
+
+
 }

@@ -25,4 +25,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.0'
     compile 'com.android.support:recyclerview-v7:24.1.0'
     compile files('libs/pinyin4j-2.5.0.jar')
+    compile project(path: ':nrl')
 }

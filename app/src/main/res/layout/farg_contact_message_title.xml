@@ -36,6 +36,7 @@
                 android:paddingLeft="@dimen/item_contact_padding">
 
                 <TextView
+                    android:text="@string/helper"
                     android:id="@+id/tv_contact_helper_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/contact_message_sign"
                     android:gravity="center"
-                    android:text="1"
+                    android:visibility="invisible"
                     android:textColor="#ffffff" />
 
 
@@ -129,6 +130,7 @@
                 android:paddingLeft="@dimen/item_contact_padding">
 
                 <TextView
+                    android:text="@string/system_message"
                     android:id="@+id/tv_contact_system_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -165,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/contact_message_sign"
                     android:gravity="center"
-                    android:text="1"
+                    android:visibility="invisible"
                     android:textColor="#ffffff" />
 
 

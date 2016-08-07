@@ -2,13 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/item_contact_padding"
-    android:paddingRight="@dimen/item_contact_padding"
-
-
     android:orientation="vertical">
     <!-- 这个TextView就是显示字母的 -->
     <TextView
+
         android:id="@+id/tag"
         android:layout_width="match_parent"
         android:layout_height="@dimen/item_indexes_height"
@@ -19,6 +16,8 @@
         android:visibility="visible" />
 
     <RelativeLayout
+        android:paddingLeft="@dimen/item_contact_padding"
+        android:paddingRight="@dimen/item_contact_padding"
         android:clickable="true"
         android:foreground="@drawable/item_foreground"
         android:layout_width="match_parent"
