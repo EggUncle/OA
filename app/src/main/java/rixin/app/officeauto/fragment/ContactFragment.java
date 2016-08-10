@@ -1,7 +1,6 @@
 package rixin.app.officeauto.fragment;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.ProgressBar;
 import android.widget.Switch;
 
 import java.lang.reflect.Field;
@@ -23,8 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rixin.app.officeauto.R;
+import rixin.app.officeauto.activity.MainActivity;
 import rixin.app.officeauto.myclass.CircleImageView;
 import rixin.app.officeauto.myclass.Msg;
+import rixin.app.officeauto.myclass.ResideMenu;
 
 /**
  * Created by egguncle on 16.8.3.
@@ -46,7 +46,7 @@ public class ContactFragment extends Fragment {
     private Switch titleSwitch;
     private ImageButton titleImgMenu;
 
-
+    private ResideMenu resideMenu;
 
 
     public ContactFragment() {
@@ -77,8 +77,19 @@ public class ContactFragment extends Fragment {
     }
 
     private void initView(){
+        MainActivity parentActivity = (MainActivity) getActivity();
+        resideMenu = parentActivity.getResideMenu();
 
         titleIvIcon = (CircleImageView) view.findViewById(R.id.title_iv_icon);
+        titleIvIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
+            }
+        });
+
+
         titleSwitch = (Switch) view.findViewById(R.id.title_switch);
         titleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

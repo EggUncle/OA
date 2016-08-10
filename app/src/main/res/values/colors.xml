@@ -8,4 +8,5 @@
     <color name="colorSearchBackground">#efefef</color>
     <color name="colorTextColor">#979797</color>
     <color name="colorViewBackground">#dedede</color>
+    <color name="leftbar_background">#FEFEFE</color>
 </resources>

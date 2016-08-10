@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/layout_left_close"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="21dp"
+            android:background="#00000000"
+            android:id="@+id/img_out"
+            android:src="@mipmap/leftbar_close"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+
+        <ImageView
+            android:id="@+id/tv_out"
+            android:src="@mipmap/leftbar_font_menu"
+
+            android:layout_width="57dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="22dp"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/lv_header"
+                    android:src="@mipmap/planet_earth"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginEnd="28dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ib_setting"
+                    android:src="@mipmap/leftbar_profile_settings"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/lv_header"
+                    android:layout_alignRight="@+id/lv_header"
+                    android:layout_alignEnd="@+id/lv_header"
+                    android:layout_gravity="center_horizontal|bottom" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_leftbar_1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:text="吃啊吃"
+                        android:textSize="20dp"
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="12dp" />
+                    <ImageButton
+                        android:id="@+id/ib_erweima"
+                        android:src="@mipmap/leftbar_profile_erweima"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="18dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_leftbar_2"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_workspace"
+                        android:text="技术研发中心"
+                        android:textSize="10dp"
+                        android:layout_width="75dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:id="@+id/tv_position"
+                        android:textSize="10dp"
+                        android:text="产品经理"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="80dp"
+                        android:layout_height="15dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:id="@+id/sv_left_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/layout_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical" >
+<!--<TextView-->
+    <!--android:text="kkkkk"-->
+    <!--android:textSize="15dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="35dp" />-->
+            <!--<TextView-->
+                <!--android:text="kkkkk"-->
+                <!--android:textSize="15dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp" />-->
+            <!--<TextView-->
+                <!--android:text="kkkkk"-->
+                <!--android:textSize="15dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp" />-->
+            <!--<TextView-->
+                <!--android:text="kkkkk"-->
+                <!--android:textSize="15dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp" />-->
+            <!--<TextView-->
+                <!--android:text="kkkkk"-->
+                <!--android:textSize="15dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp" />-->
+            <!--<TextView-->
+                <!--android:text="kkkkk"-->
+                <!--android:textSize="15dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp" />-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/layout_left_logout"
+        android:layout_below="@+id/sv_left_menu"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_marginLeft="21dp"
+            android:background="#00000000"
+            android:id="@+id/img_out"
+            android:src="@mipmap/leftbar_logout"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+
+        <ImageView
+            android:id="@+id/tv_out"
+            android:src="@mipmap/leftbar_font_logout"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="22dp" />
+
+    </LinearLayout>
+ </RelativeLayout>
+</LinearLayout>
