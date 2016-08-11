@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="@dimen/home_title_height">
+
+    <ImageButton
+        android:layout_width="@dimen/home_title_left_bar_height"
+        android:layout_height="@dimen/home_title_left_bar_height"
+        android:background="#00ffffff"
+        android:src="@drawable/home_navbar_leftbar"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_spinner_height"
+        android:id="@+id/spinner"
+        android:entries="@array/spinner_array"
+        android:layout_weight="1" />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/home_navbar_searchbar"
+    android:background="#00ffffff"
+    />
+</LinearLayout>

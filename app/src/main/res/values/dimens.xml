@@ -52,4 +52,9 @@
     <dimen name="contact_pop_window_height">100dp</dimen>
     <dimen name="contact_pop_window_padding">10dp</dimen>
 
+    <!--home页面标题栏-->
+    <dimen name="home_title_height">45dp</dimen>
+    <dimen name="home_title_spinner_height">20dp</dimen>
+    <dimen name="home_title_left_bar_height">20dp</dimen>
+
 </resources>
