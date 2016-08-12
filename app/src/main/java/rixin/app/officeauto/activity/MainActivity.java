@@ -30,6 +30,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private FragmentManager fm;
     private FragmentTransaction transaction;
     private ContactFragment contactFragment;
+    private HomeFragment homeFragment;
     private ToolsFragment toolsFragment;
 
     private Fragment nowFragment;// 当前的farmgent，在toolFragment收起后显示该fragment
@@ -66,16 +67,22 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      */
     private void initViews(){
         mainFragment = (FrameLayout) findViewById(R.id.main_fragment);
-        imgHome = (ImageButton) findViewById(R.id.img_home);
+        imgHome = (ImageButton) findViewById(R.id.img_home_page);
         imgHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 imgHome.setImageDrawable(getResources().getDrawable(R.drawable.tabbar_home_highlighted));
                 imgContact.setImageDrawable(getResources().getDrawable(R.drawable.tabbar_contact));
+
+                nowFragment = homeFragment;
+
+                transaction = fm.beginTransaction();
+                transaction.replace(R.id.main_fragment, homeFragment);
+                transaction.commit();
             }
         });
 
-        imgTools = (ImageButton) findViewById(R.id.img_tools);
+        imgTools = (ImageButton) findViewById(R.id.img_tools_page);
         imgTools.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,7 +99,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }
             }
         });
-        imgContact = (ImageButton) findViewById(R.id.img_contact);
+        imgContact = (ImageButton) findViewById(R.id.img_contact_page);
         imgContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,6 +126,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      */
 
     private void initFragments() {
+        homeFragment = new HomeFragment();
         contactFragment = new ContactFragment(this);
         toolsFragment = new ToolsFragment();
          fm = getSupportFragmentManager();
