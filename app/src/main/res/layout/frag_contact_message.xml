@@ -20,9 +20,7 @@
         app:load_text_color="#ffffff"
         android:id="@+id/contact_message_nrl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:auto_load_more="true"
-        >
+        android:layout_height="match_parent">
 
             <rixin.app.officeauto.myclass.XCRecyclerView
                 android:id="@+id/rcv_frag_contact_message"

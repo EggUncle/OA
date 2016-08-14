@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
 
 <ProgressBar
@@ -12,12 +13,19 @@
     style="@style/Widget.AppCompat.ProgressBar"
     />
 
-        <rixin.app.officeauto.myclass.XCRecyclerView
-            android:id="@+id/rcv_book"
+        <com.xlf.nrl.NsRefreshLayout
+            android:id="@+id/contact_book_nrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="invisible"
+            app:load_text_color="#ffffff"
+            app:load_view_bg_color="#6e6e6e">
+
+                <rixin.app.officeauto.myclass.XCRecyclerView
+            android:id="@+id/rcv_book"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
-
+        </com.xlf.nrl.NsRefreshLayout>
 
 </RelativeLayout>

@@ -53,6 +53,7 @@
     <dimen name="contact_pop_window_padding">10dp</dimen>
 
     <!--home页面标题栏-->
+    <dimen name="home_title_tv_font_size">16sp</dimen>
     <dimen name="home_title_height">45dp</dimen>
     <dimen name="home_title_spinner_height">20dp</dimen>
     <dimen name="home_title_left_bar_height">20dp</dimen>
@@ -61,4 +62,14 @@
     <!--home页面宣传栏-->
     <dimen name="home_viewpage_height">150dp</dimen>
 
+    <!--home页面公告栏列表项-->
+    <dimen name="home_item_height">150dp</dimen>
+    <dimen name="home_item_title_font_size">16sp</dimen>
+    <dimen name="home_item_date_font_size">12sp</dimen>
+    <dimen name="home_item_author_font_size">12sp</dimen>
+    <dimen name="home_item_from_font_size">12sp</dimen>
+    <dimen name="home_item_content_font_size">14sp</dimen>
+    <dimen name="home_item_padding">20dp</dimen>
+    <dimen name="home_item_tv_padding_left">5dp</dimen>
+    <dimen name="home_item_tv_padding_top_bottom">15dp</dimen>
 </resources>

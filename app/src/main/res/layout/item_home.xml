@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_home_line"
+    android:clickable="true"
+    android:foreground="@drawable/item_foreground"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/home_item_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/textHomeColor"
+            android:id="@+id/tv_item_home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/home_item_title_font_size" />
+
+        <TextView
+            android:id="@+id/tv_item_home_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_item_home_title"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/home_item_date_font_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_home_item_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/home_item_tv_padding_top_bottom"
+        android:paddingLeft="@dimen/home_item_tv_padding_left"
+        android:paddingTop="@dimen/home_item_tv_padding_top_bottom"
+        android:textSize="@dimen/home_item_author_font_size" />
+
+
+    <TextView
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:id="@+id/tv_home_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/home_item_tv_padding_top_bottom"
+        android:textSize="@dimen/home_item_content_font_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来源:"
+            android:textSize="@dimen/home_item_from_font_size" />
+
+        <TextView
+            android:textColor="@color/textHomeColor"
+            android:id="@+id/tv_home_item_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/home_item_from_font_size" />
+    </LinearLayout>
+
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"/>
+</LinearLayout>

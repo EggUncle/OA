@@ -12,73 +12,81 @@
     android:paddingTop="@dimen/item_contact_padding"
     >
 
-
-    <rixin.app.officeauto.myclass.CircleImageView
-        android:id="@+id/iv_contact_icon"
-        android:scaleType="fitXY"
-        android:layout_width="@dimen/item_contact_message_icon_width"
-        android:layout_height="@dimen/item_contact_message_height"
-        android:src="@mipmap/ic_launcher" />
-
-    <LinearLayout
-
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/item_contact_padding">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <TextView
+            <rixin.app.officeauto.myclass.CircleImageView
+                android:id="@+id/iv_contact_icon"
+                android:layout_width="@dimen/item_contact_message_icon_width"
+                android:layout_height="@dimen/item_contact_message_height"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/tv_contact_name"
-                android:textSize="@dimen/item_contact_font_size" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_contact_time"
-                android:textColor="@color/colorTextColor"
-                android:textSize="@dimen/item_contact_time_font_size" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/item_contact_padding">
+
+                    <TextView
+                        android:id="@+id/tv_contact_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/item_contact_font_size" />
+
+                    <TextView
+                        android:id="@+id/tv_contact_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextColor"
+                        android:textSize="@dimen/item_contact_time_font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/item_contact_padding">
+
+                    <TextView
+                        android:id="@+id/tv_contact_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorTextColor"
+                        android:textSize="@dimen/item_contact_message_font_size" />
+
+                    <TextView
+                        android:id="@+id/tv_contact_message_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/contact_message_sign"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/item_contact_padding">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/tv_contact_content"
-                android:textColor="@color/colorTextColor"
-                android:textSize="@dimen/item_contact_message_font_size" />
-
-            <TextView
-                android:textColor="#ffffff"
-                android:gravity="center"
-                android:id="@+id/tv_contact_message_num"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:background="@drawable/contact_message_sign"
-                />
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </RelativeLayout>
 
 </LinearLayout>
 

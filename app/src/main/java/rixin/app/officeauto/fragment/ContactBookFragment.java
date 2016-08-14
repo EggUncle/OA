@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.xlf.nrl.NsRefreshLayout;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -31,8 +33,9 @@ import rixin.app.officeauto.util.PinyinUtils;
 public class ContactBookFragment extends Fragment {
     private View view;
     private View headView;
-    private XCRecyclerView recyclerView;
+    private XCRecyclerView rcvBook;
     private ProgressBar pbContactBook;
+    private NsRefreshLayout nrlBook;
 
     private List<PersonBean> data;
     private ContactBookRecycleAdapter contactAdapter;
@@ -60,15 +63,52 @@ public class ContactBookFragment extends Fragment {
     }
 
     private void initView() {
+        nrlBook = (NsRefreshLayout) view.findViewById(R.id.contact_book_nrl);
+        nrlBook.setRefreshLayoutController(new NsRefreshLayout.NsRefreshLayoutController(){
+            @Override
+            public boolean isPullRefreshEnable() {
+                return true;
+            }
+
+            @Override
+            public boolean isPullLoadEnable() {
+                return false;
+            }
+        });
+        nrlBook.setRefreshLayoutListener(new NsRefreshLayout.NsRefreshLayoutListener() {
+            @Override
+            public void onRefresh() {
+                nrlBook.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        nrlBook.finishPullRefresh();
+
+                        //  Toast.makeText(getActivity(), "下拉刷新", Toast.LENGTH_LONG).show();
+                    }
+                }, 1000);
+            }
+
+            @Override
+            public void onLoadMore() {
+                nrlBook.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        nrlBook.finishPullLoad();
+
+                        //     Toast.makeText(getActivity(), "上拉加载更多", Toast.LENGTH_LONG).show();
+                    }
+                }, 1000);
+            }
+        });
+
         pbContactBook = (ProgressBar) view.findViewById(R.id.contact_book_progress);
-        recyclerView = (XCRecyclerView) view.findViewById(R.id.rcv_book);
+        rcvBook = (XCRecyclerView) view.findViewById(R.id.rcv_book);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.addItemDecoration(new RecycleViewDivider(context, LinearLayoutManager.HORIZONTAL));
-
-        recyclerView.addHeaderView(headView);
+        rcvBook.setLayoutManager(linearLayoutManager);
+        rcvBook.addItemDecoration(new RecycleViewDivider(context, LinearLayoutManager.HORIZONTAL));
+        rcvBook.addHeaderView(headView);
     }
 
     private void initVars() {
@@ -149,9 +189,9 @@ public class ContactBookFragment extends Fragment {
         protected void onPostExecute(Void v) {
             //执行后返回值
             super.onPostExecute(v);
-            recyclerView.setAdapter(contactAdapter);
+            rcvBook.setAdapter(contactAdapter);
             pbContactBook.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.VISIBLE);
+            nrlBook.setVisibility(View.VISIBLE);
         }
 
         @Override

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_height"
+        android:padding="@dimen/home_title_padding">
+
+        <ImageButton
+            android:id="@+id/img_home_left_bar"
+            android:layout_width="@dimen/home_title_left_bar_height"
+            android:layout_height="@dimen/home_title_left_bar_height"
+            android:layout_alignParentLeft="true"
+            android:background="#00ffffff"
+            android:src="@drawable/home_navbar_leftbar" />
+
+        <!--<Spinner-->
+        <!--android:id="@+id/spinner"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/home_title_spinner_height"-->
+        <!--android:layout_centerInParent="true"-->
+        <!---->
+        <!--android:entries="@array/spinner_array"-->
+        <!--/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_title_spinner_height"
+            android:layout_centerInParent="true"
+            android:text="首页"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#00ffffff"
+            android:src="@drawable/home_navbar_searchbar" />
+
+    </RelativeLayout>
+
+    <!--<include layout="@layout/frag_home_title" />-->
+
+    <com.xlf.nrl.NsRefreshLayout
+        app:load_view_bg_color="#6e6e6e"
+        app:load_text_color="#ffffff"
+        android:id="@+id/home_nrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <rixin.app.officeauto.myclass.XCRecyclerView
+        android:id="@+id/rcv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager" />
+
+</com.xlf.nrl.NsRefreshLayout>
+</LinearLayout>

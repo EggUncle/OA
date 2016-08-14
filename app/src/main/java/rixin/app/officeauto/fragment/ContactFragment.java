@@ -84,7 +84,6 @@ public class ContactFragment extends Fragment {
         titleIvIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
             }
         });
@@ -97,12 +96,12 @@ public class ContactFragment extends Fragment {
                 if(!b){
                     transaction = fm.beginTransaction();
                     //   transaction.replace(R.id.fragment_contact, contactMessageFragment);
-                    transaction.replace(R.id.fragment_contact, contactBookFragment);
+                    transaction.replace(R.id.fragment_contact, contactMessageFragment);
                     transaction.commit();
                 }else {
                     transaction = fm.beginTransaction();
                     //   transaction.replace(R.id.fragment_contact, contactMessageFragment);
-                    transaction.replace(R.id.fragment_contact, contactMessageFragment);
+                    transaction.replace(R.id.fragment_contact, contactBookFragment);
                     transaction.commit();
                 }
             }
@@ -148,7 +147,7 @@ public class ContactFragment extends Fragment {
 
         fm = getChildFragmentManager();
         transaction = fm.beginTransaction();
-        transaction.replace(R.id.fragment_contact, contactBookFragment);
+        transaction.replace(R.id.fragment_contact, contactMessageFragment);
         transaction.commit();
 //        transaction.replace(R.id.fragment_contact, contactBookFragment);
 //        transaction.commit();

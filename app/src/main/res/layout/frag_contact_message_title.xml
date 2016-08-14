@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_contact_system_message_height"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_contact_message_height"
+        android:clickable="true"
+        android:foreground="@drawable/item_foreground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/item_contact_padding"
+        android:paddingLeft="@dimen/item_contact_padding"
+        android:paddingRight="@dimen/item_contact_padding"
+        android:paddingTop="@dimen/item_contact_padding">
+
+        <rixin.app.officeauto.myclass.CircleImageView
+            android:id="@+id/iv_contact_helper"
+            android:layout_width="@dimen/item_contact_message_icon_width"
+            android:layout_height="@dimen/item_contact_message_height"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/item_contact_padding">
+
+                <TextView
+                    android:text="@string/helper"
+                    android:id="@+id/tv_contact_helper_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/item_contact_font_size" />
+
+                <TextView
+                    android:id="@+id/tv_contact_helper_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextColor"
+                    android:textSize="@dimen/item_contact_time_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/item_contact_padding">
+
+                <TextView
+                    android:id="@+id/tv_contact_helper_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorTextColor"
+                    android:textSize="@dimen/item_contact_message_font_size" />
+
+                <TextView
+                    android:id="@+id/tv_contact_helper_message_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contact_message_sign"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:textColor="#ffffff" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/item_contact_system_divider_left"
+        android:paddingRight="@dimen/item_contact_system_divider_right">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_contact_system_divider_height"
+            android:background="@color/colorViewBackground" />
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_contact_message_height"
+        android:clickable="true"
+        android:foreground="@drawable/item_foreground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/item_contact_padding"
+        android:paddingLeft="@dimen/item_contact_padding"
+        android:paddingRight="@dimen/item_contact_padding"
+        android:paddingTop="@dimen/item_contact_padding">
+
+        <rixin.app.officeauto.myclass.CircleImageView
+            android:id="@+id/iv_contact_system_icon"
+            android:layout_width="@dimen/item_contact_message_icon_width"
+            android:layout_height="@dimen/item_contact_message_height"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/item_contact_padding">
+
+                <TextView
+                    android:text="@string/system_message"
+                    android:id="@+id/tv_contact_system_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/item_contact_font_size" />
+
+                <TextView
+                    android:id="@+id/tv_contact_system_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextColor"
+                    android:textSize="@dimen/item_contact_time_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/item_contact_padding">
+
+                <TextView
+                    android:id="@+id/tv_contact_system_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorTextColor"
+                    android:textSize="@dimen/item_contact_message_font_size" />
+
+                <TextView
+                    android:id="@+id/tv_contact_system_message_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contact_message_sign"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:textColor="#ffffff" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frag_contact_divide"
+        android:background="@color/colorSearchBackground" />
+
+</LinearLayout>

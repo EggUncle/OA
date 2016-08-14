@@ -51,7 +51,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         context = this;
         setUpMenu();
         if( savedInstanceState == null )
-            changeFragment(new HomeFragment());
+            changeFragment(new HomeFragment(this));
 
         initViews();
         initFragments();
@@ -88,14 +88,20 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             public void onClick(View view) {
                 if (!keyTools) {    //当toolsFragment未展开时，展开它
                     transaction = fm.beginTransaction();
+                    transaction.setCustomAnimations(R.anim.fragment_slide_in_from_bottom,R.anim.fragment_slide_in_from_top);
                     transaction.replace(R.id.main_fragment, toolsFragment);
                     transaction.commit();
+
                     keyTools=true;
+                    imgTools.setImageResource(R.drawable.home_tabbar_tools_highlighted);
+
                 }else{
                     transaction = fm.beginTransaction();
+                    transaction.setCustomAnimations(R.anim.fragment_slide_in_from_bottom_2,R.anim.fragment_slide_in_from_top);
                     transaction.replace(R.id.main_fragment, nowFragment);
                     transaction.commit();
                     keyTools=false;
+                    imgTools.setImageResource(R.drawable.tabbar_tools);
                 }
             }
         });
@@ -126,11 +132,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      */
 
     private void initFragments() {
-        homeFragment = new HomeFragment();
+        homeFragment = new HomeFragment(this);
         contactFragment = new ContactFragment(this);
         toolsFragment = new ToolsFragment();
          fm = getSupportFragmentManager();
-
+        nowFragment = homeFragment;
 
     }
 
@@ -139,18 +145,18 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View view) {
 
         if (view == leftbar_manager){
-            changeFragment(new HomeFragment());
+          //  changeFragment(new HomeFragment());
         }
         else if (view == leftbar_setting){
-            changeFragment(new HomeFragment());
+        //    changeFragment(new HomeFragment());
         }else if (view == leftbar_news){
-            changeFragment(new HomeFragment());
+         //   changeFragment(new HomeFragment());
         }else if (view == leftbar_clear){
-            changeFragment(new HomeFragment());
+         //   changeFragment(new HomeFragment());
         }else if (view == leftbar_news){
-            changeFragment(new HomeFragment());
+          //  changeFragment(new HomeFragment());
         }else if (view == leftbar_news){
-            changeFragment(new HomeFragment());
+         //   changeFragment(new HomeFragment());
         }
 
         //菜单关闭方法

@@ -18,10 +18,11 @@ import rixin.app.officeauto.myclass.Msg;
  * Created by egguncle on 16.8.4.
  * 用于消息界面的适配器
  */
-public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMessageRecycleAdapter.MyViewHolder> {
+public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMessageRecycleAdapter.MyViewHolder>{
 
     private Context context;
     private List<Msg> dataMsg;
+
 
     public ContactMessageRecycleAdapter(Context context, List<Msg> dataNews) {
         this.context = context;
@@ -44,12 +45,9 @@ public class ContactMessageRecycleAdapter extends RecyclerView.Adapter<ContactMe
 
     }
 
-
     @Override
     public int getItemCount() {
-
         return dataMsg == null ? 0 : dataMsg.size();
-
     }
 
 
