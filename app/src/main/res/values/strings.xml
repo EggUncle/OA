@@ -3,4 +3,6 @@
     <string name="title_search">搜索</string>
     <string name="helper">小助手</string>
     <string name="system_message">系统通知</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 </resources>

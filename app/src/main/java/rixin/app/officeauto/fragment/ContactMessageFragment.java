@@ -1,6 +1,8 @@
 package rixin.app.officeauto.fragment;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,12 +12,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.xlf.nrl.NsRefreshLayout;
-
+import java.util.Collections;
 import java.util.List;
 
 import rixin.app.officeauto.R;
@@ -120,40 +125,132 @@ public class ContactMessageFragment extends Fragment{
             }
         });
 
-//        itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.Callback() {
-//            @Override
-//            public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-//                final int dragFlags;
-//                final int swipeFlags;
-//                if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
-//                    dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
-//                    swipeFlags = 0;
-//                } else {
-//                    dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-//                    swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
-//                }
-//                return makeMovementFlags(dragFlags, swipeFlags);
-//            }
-//
-//            @Override
-//            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-//                return false;
-//            }
-//
+        itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.Callback() {
+            @Override
+            public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+                final int dragFlags;
+                final int swipeFlags;
+                if (viewHolder.getAdapterPosition() == 0) {   //阻止 小助手 系统通知项被滑动删除
+                    return 0;
+                }
+
+                if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
+                    dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+                    swipeFlags = 0;
+                } else {
+                    dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+                    swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
+                }
+                return makeMovementFlags(dragFlags, swipeFlags);
+            }
+
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+                // 释放View时回调，清除背景颜色，隐藏图标
+                // 默认是操作ViewHolder的itemView，这里调用ItemTouchUIUtil的clearView方法传入指定的view
+                getDefaultUIUtil().clearView(((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).lineMessageItem);
+                ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).vBackground.setBackgroundColor(Color.TRANSPARENT);
+                ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).ivDelete.setVisibility(View.GONE);
+          //      ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).ivDone.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                int position = viewHolder.getAdapterPosition();
+                if (position!=messageAdapter.getItemCount()) {
+                    messageAdapter.notifyItemRemoved(position);
+                    messageData.remove(position);
+                }else{
+                    messageAdapter.notifyItemRemoved(position);
+                    messageData.remove(position-1);
+                }
+
+            }
+
 //            @Override
 //            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-//                int position = viewHolder.getAdapterPosition();
-//                messageAdapter.notifyItemRemoved(position);
-//                messageData.remove(position);
+//                // 处理滑动事件回调
+//                final int pos = viewHolder.getAdapterPosition();
+//                final Msg item = messageData.get(pos);
+//                messageData.remove(pos);
+//                messageAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+//                String text;
+//                // 判断方向，进行不同的操作
+//                if (direction == ItemTouchHelper.RIGHT) {
+//                    text = "删除一项";
+//                } else {
+//                    text = "延迟一项";
+//                }
+////                Snackbar.make(viewHolder.itemView, text, Snackbar.LENGTH_LONG)
+////                        .setAction("撤销", new View.OnClickListener() {
+////                            @Override
+////                            public void onClick(View v) {
+////                                mData.add(pos, item);
+////                                mSampleAdapter.notifyItemInserted(pos);
+////                            }
+////                        }).show();
 //            }
-//        });
-      //  itemTouchHelper.attachToRecyclerView(rcvFragContactMessage);
+
+//            @Override
+//            public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+//                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+//                if(actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
+//                    //滑动时改变Item的透明度
+//                    final float alpha = 1 - Math.abs(dX) / (float)viewHolder.itemView.getWidth();
+//                    viewHolder.itemView.setAlpha(alpha);
+//                    viewHolder.itemView.setTranslationX(dX);
+//                }
+//            }
+
+            @Override
+            public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
+                // 当viewHolder的滑动或拖拽状态改变时回调
+                if (viewHolder != null) {
+                    // 默认是操作ViewHolder的itemView，这里调用ItemTouchUIUtil的clearView方法传入指定的view
+                    getDefaultUIUtil().onSelected(((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).lineMessageItem);
+                }
+            }
+
+            @Override
+            public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+                // ItemTouchHelper的onDraw方法会调用该方法，可以使用Canvas对象进行绘制，绘制的图案会在RecyclerView的下方
+                // 默认是操作ViewHolder的itemView，这里调用ItemTouchUIUtil的clearView方法传入指定的view
+                getDefaultUIUtil().onDraw(c, recyclerView, ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).lineMessageItem, dX, dY, actionState, isCurrentlyActive);
+                if (dX > 0) { // 向左滑动是的提示
+//                    ((SampleAdapter.ItemViewHolder) viewHolder).vBackground.setBackgroundResource(R.color.colorDone);
+//                    ((SampleAdapter.ItemViewHolder) viewHolder).ivDone.setVisibility(View.VISIBLE);
+//                    ((SampleAdapter.ItemViewHolder) viewHolder).ivSchedule.setVisibility(View.GONE);
+                }
+                if (dX < 0) { // 向右滑动时的提示
+                    ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).vBackground.setBackgroundResource(R.color.colorDelete);
+                    ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).ivDelete.setVisibility(View.VISIBLE);
+            //        ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).ivDone.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onChildDrawOver(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+                // ItemTouchHelper的onDrawOver方法会调用该方法，可以使用Canvas对象进行绘制，绘制的图案会在RecyclerView的上方
+                // 默认是操作ViewHolder的itemView，这里调用ItemTouchUIUtil的clearView方法传入指定的view
+                getDefaultUIUtil().onDrawOver(c, recyclerView, ((ContactMessageRecycleAdapter.ItemViewHolder) viewHolder).lineMessageItem, dX, dY, actionState, isCurrentlyActive);
+            }
+        });
+        itemTouchHelper.attachToRecyclerView(rcvFragContactMessage);
     }
 
 
     private void initVars() {
         messageAdapter = new ContactMessageRecycleAdapter(context, messageData);
     }
+
+
+
+
 
 
     //使用异步加载来加载联系人列表

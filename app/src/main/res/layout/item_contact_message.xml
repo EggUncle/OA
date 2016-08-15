@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_background"
     android:layout_width="match_parent"
-    android:id="@+id/line_message_item"
     android:layout_height="@dimen/item_contact_message_height"
     android:clickable="true"
-    android:foreground="@drawable/item_foreground"
-    android:orientation="horizontal"
-    android:paddingLeft="@dimen/item_contact_padding"
-    android:paddingRight="@dimen/item_contact_padding"
-    android:paddingBottom="@dimen/item_contact_padding"
-    android:paddingTop="@dimen/item_contact_padding"
-    >
+    android:foreground="@drawable/item_foreground">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:src="@drawable/ic_action_delete" />
+
+    <LinearLayout
+        android:id="@+id/line_message_item"
+        android:background="@android:color/white"
+        android:paddingBottom="@dimen/item_contact_padding"
+        android:paddingLeft="@dimen/item_contact_padding"
+        android:paddingRight="@dimen/item_contact_padding"
+        android:paddingTop="@dimen/item_contact_padding"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -28,7 +37,6 @@
                 android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -88,5 +96,6 @@
 
     </RelativeLayout>
 
-</LinearLayout>
+
+
 
