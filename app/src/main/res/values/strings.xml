@@ -4,5 +4,7 @@
     <string name="helper">小助手</string>
     <string name="system_message">系统通知</string>
 
+    <string name="edit_information">编辑资料</string>
+
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 </resources>

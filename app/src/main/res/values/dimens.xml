@@ -10,7 +10,7 @@
     <dimen name="main_bottom_btn_interval">30dp</dimen>
     <dimen name="main_bottom_top_interval">2dp</dimen>
     <dimen name="main_bottom_bottom_interval">2dp</dimen>
-    
+
     <!--联系人页面标题栏-->
     <dimen name="title_iv_user_icon_height">40dp</dimen>
     <dimen name="title_iv_user_icon_width">40dp</dimen>
@@ -46,7 +46,7 @@
     <dimen name="three_button_padding_left_right">40dp</dimen>
     <dimen name="three_button_padding_top_bottom">20dp</dimen>
     <dimen name="item_indexes_height">20dp</dimen>
-    
+
     <!--联系人列表菜单弹窗-->
     <dimen name="contact_pop_window_width">100dp</dimen>
     <dimen name="contact_pop_window_height">100dp</dimen>
@@ -72,4 +72,13 @@
     <dimen name="home_item_padding">20dp</dimen>
     <dimen name="home_item_tv_padding_left">5dp</dimen>
     <dimen name="home_item_tv_padding_top_bottom">15dp</dimen>
+
+    <!--编辑资料页面-->
+    <dimen name="ac_edit_information_title_height">45dp</dimen>
+    <dimen name="ac_edit_information_title_font_size">18sp</dimen>
+    <dimen name="ac_edit_information_icon_size">60dp</dimen>
+    <dimen name="ac_edit_information_information_height">45dp</dimen>
+    <dimen name="ac_edit_information_font_size">16sp</dimen>
+
+
 </resources>

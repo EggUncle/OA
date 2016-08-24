@@ -18,21 +18,21 @@
             android:background="#00ffffff"
             android:src="@drawable/home_navbar_leftbar" />
 
-        <!--<Spinner-->
-        <!--android:id="@+id/spinner"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="@dimen/home_title_spinner_height"-->
-        <!--android:layout_centerInParent="true"-->
-        <!---->
-        <!--android:entries="@array/spinner_array"-->
-        <!--/>-->
+        <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/home_title_spinner_height"
+        android:layout_centerInParent="true"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/home_title_spinner_height"
-            android:layout_centerInParent="true"
-            android:text="首页"
-            android:textSize="14sp" />
+        android:entries="@array/spinner_array"
+        />
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/home_title_spinner_height"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="首页"-->
+            <!--android:textSize="14sp" />-->
 
         <ImageButton
             android:layout_width="wrap_content"
