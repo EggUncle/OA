@@ -2,13 +2,15 @@
 <resources>
     <color name="colorPrimary">#b9b9b9</color>
     <color name="colorPrimaryDark">#909093</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#6FD865</color>
     <color name="colorDelete">#ff3737</color>
     
     <color name="colorSearchBackground">#efefef</color>
     <color name="colorTextColor">#979797</color>
     <color name="colorViewBackground">#dedede</color>
     <color name="leftbar_background">#FEFEFE</color>
+    <color name="colorGray">#efefef</color>
+    <color name="btnBackground">#425255</color>
 
     <color name="textHomeColor">#353535</color>
 </resources>

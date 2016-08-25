@@ -74,11 +74,33 @@
     <dimen name="home_item_tv_padding_top_bottom">15dp</dimen>
 
     <!--编辑资料页面-->
-    <dimen name="ac_edit_information_title_height">45dp</dimen>
+    <dimen name="ac_edit_information_title_height">50dp</dimen>
     <dimen name="ac_edit_information_title_font_size">18sp</dimen>
     <dimen name="ac_edit_information_icon_size">60dp</dimen>
     <dimen name="ac_edit_information_information_height">45dp</dimen>
     <dimen name="ac_edit_information_font_size">16sp</dimen>
+    <dimen name="ac_edit_information_btn_back_size">40dp</dimen>
+    <dimen name="ac_edit_information_background_height_icon">130dp</dimen>
+    <dimen name="ac_edit_information_space_height">25dp</dimen>
+    <dimen name="ac_edit_information_padding_tv">15dp</dimen>
+    <dimen name="ac_edit_information_padding_iv">10dp</dimen>
 
+    <!--后台管理页面-->
+    <dimen name="ac_backstage_management_title_height">50dp</dimen>
+    <dimen name="ac_backstage_management_information_height">50dp</dimen>
+    <dimen name="ac_backstage_management_padding_iv">20dp</dimen>
+    <dimen name="ac_backstage_management_font_size">18sp</dimen>
+    <dimen name="ac_backstage_management_name_height">80dp</dimen>
+    <dimen name="ac_backstage_management_icon_size">50dp</dimen>
+    <dimen name="ac_backstage_padding_right">10dp</dimen>
+    <dimen name="ac_backstage_padding_top">5dp</dimen>
+    <dimen name="ac_backstage_tb_height">40dp</dimen>
+
+    <!--消息通知设置页面-->
+    <dimen name="ac_notice_quiet_about_size">12sp</dimen>
+
+    <!--反馈页面-->
+    <dimen name="ac_suggestion_height">170dp</dimen>
+    <dimen name="ac_suggestion_add_size">40dp</dimen>
 
 </resources>

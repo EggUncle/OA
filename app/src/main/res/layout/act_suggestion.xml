@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context="rixin.app.officeauto.activity.SuggestionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_title_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/btn_ac_notice_back"
+            android:layout_width="@dimen/ac_edit_information_btn_back_size"
+            android:layout_height="@dimen/ac_edit_information_btn_back_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/firstenter_3_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/suggtion"
+            android:textSize="@dimen/ac_edit_information_title_font_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_put_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:text="@string/put_up"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_suggestion_height"
+        android:orientation="vertical">
+
+        <EditText
+            android:padding="@dimen/home_item_tv_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:padding="@dimen/ac_edit_information_padding_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/leftbar_houtaiguanli_wodequanxian_faburenwu_add"
+                />
+
+            <TextView
+                android:paddingRight="@dimen/ac_edit_information_padding_tv"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_word_number"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

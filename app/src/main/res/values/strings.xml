@@ -5,6 +5,35 @@
     <string name="system_message">系统通知</string>
 
     <string name="edit_information">编辑资料</string>
-
+    <string name="name">姓名</string>
+    <string name="college">学院</string>
+    <string name="telephone_number">电话号码</string>
+    <string name="birthday">生日</string>
+    <string name="sex">性别</string>
+    <string name="backstage">后台管理</string>
+    <string name="competence">我的权限</string>
+    <string name="distribution">权限分配</string>
+    <string name="change">切换组织</string>
+    <string name="exit">退出组织</string>
+    <string name="setting">账户设置</string>
+    <string name="phone">手机绑定</string>
+    <string name="password">修改密码</string>
+    <string name="qq">QQ绑定</string>
+    <string name="weixin">微信绑定</string>
+    <string name="notice">新消息通知</string>
+    <string name="had_on">已开启</string>
+    <string name="information">显示消息详情</string>
+    <string name="voice">声音</string>
+    <string name="vibration">振动</string>
+    <string name="group_vibration">群振动</string>
+    <string name="quiet">免打扰模式</string>
+    <string name="quiet_about">开启后晚上23：00-次日8：00将不会收到任何消息提示</string>
+    <string name="clear">清除缓存</string>
+    <string name="clear_date">清除缓存数据</string>
+    <string name="clear_chat">清除聊天记录</string>
+    <string name="help">使用帮助</string>
+    <string name="suggtion">意见反馈</string>
+    <string name="about">关于</string>
+    <string name="put_up">提交</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 </resources>

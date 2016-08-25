@@ -1,5 +1,6 @@
 package rixin.app.officeauto.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -145,18 +146,24 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View view) {
 
         if (view == leftbar_manager){
-          //  changeFragment(new HomeFragment());
+            Intent intent = new Intent(MainActivity.this,BackstageActivity.class);
+            startActivity(intent);
         }
         else if (view == leftbar_setting){
-        //    changeFragment(new HomeFragment());
+            Intent intent = new Intent(MainActivity.this,UserSettingActivity.class);
+            startActivity(intent);
         }else if (view == leftbar_news){
-         //   changeFragment(new HomeFragment());
+            Intent intent = new Intent(MainActivity.this,NoticeActivity.class);
+            startActivity(intent);
         }else if (view == leftbar_clear){
-         //   changeFragment(new HomeFragment());
-        }else if (view == leftbar_news){
-          //  changeFragment(new HomeFragment());
-        }else if (view == leftbar_news){
-         //   changeFragment(new HomeFragment());
+            Intent intent = new Intent(MainActivity.this,ClearActivity.class);
+            startActivity(intent);
+        }else if (view == leftbar_help){
+            Intent intent = new Intent(MainActivity.this,HelpActivity.class);
+            startActivity(intent);
+        }else if (view == leftbar_about){
+            Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+            startActivity(intent);
         }
 
         //菜单关闭方法

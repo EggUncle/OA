@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context="rixin.app.officeauto.activity.EditInformationActivity">
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_title_height"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/ac_edit_information_btn_back_size"
+            android:layout_height="@dimen/ac_edit_information_btn_back_size"
+            android:id="@+id/btn_ac_ed_back"
+            android:src="@drawable/firstenter_3_back"
+            />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_title_font_size"
+            android:text="@string/edit_information"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_background_height_icon">
+
+        <rixin.app.officeauto.myclass.CircleImageView
+            android:id="@+id/iv_ac_edit_information_icon"
+            android:layout_width="@dimen/ac_edit_information_icon_size"
+            android:layout_height="@dimen/ac_edit_information_icon_size"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/name"
+            />
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_name"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/college"
+            />
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_college"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/telephone_number"
+            />
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_telephone"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        ></View>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"></LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/sex"
+            />
+
+        <TextView
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_sex"
+            />
+
+        <ImageView
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_book_wodebumen_enter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/birthday"
+            />
+
+        <TextView
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_birthday"
+            />
+        <ImageView
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_book_wodebumen_enter"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        ></View>
+</LinearLayout>

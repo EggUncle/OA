@@ -6,6 +6,7 @@ package rixin.app.officeauto.myclass;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Rect;
@@ -31,6 +32,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rixin.app.officeauto.R;
+import rixin.app.officeauto.activity.EditInformationActivity;
+import rixin.app.officeauto.activity.MainActivity;
 
 /**
  * User: special
@@ -104,7 +107,7 @@ public class ResideMenu extends FrameLayout {
         initViews(context, customLeftMenuId, customRightMenuId);
     }
 
-    private void initViews(Context context, int customLeftMenuId,
+    private void initViews(final Context context, int customLeftMenuId,
                            int customRightMenuId) {
         //取得XML的view
         LayoutInflater inflater = (LayoutInflater) context
@@ -132,6 +135,16 @@ public class ResideMenu extends FrameLayout {
         imageViewBackground = (ImageView) findViewById(R.id.iv_background);
 
         RelativeLayout menuHolder = (RelativeLayout) findViewById(R.id.sv_menu_holder);
+
+        //添加用户图标的点击事件
+        ImageView imgLeftIcon = (ImageView) scrollViewLeftMenu.findViewById(R.id.lv_header);
+        imgLeftIcon.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, EditInformationActivity.class);
+                context.startActivity(intent);
+            }
+        });
         menuHolder.addView(scrollViewLeftMenu);
         menuHolder.addView(scrollViewRightMenu);
     }

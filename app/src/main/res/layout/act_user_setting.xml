@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context="rixin.app.officeauto.activity.UserSettingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_backstage_management_title_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/btn_ac_setting_back"
+            android:layout_width="@dimen/ac_edit_information_btn_back_size"
+            android:layout_height="@dimen/ac_edit_information_btn_back_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/firstenter_3_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/setting"
+            android:textSize="@dimen/ac_edit_information_title_font_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/phone"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:id="@+id/tv_setting_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:src="@drawable/contact_book_wodebumen_enter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/password"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:id="@+id/tv_setting_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:src="@drawable/contact_book_wodebumen_enter" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/qq"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:id="@+id/tv_setting_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_setting_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/weixin"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:id="@+id/tv_setting_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_setting_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"></View>
+</LinearLayout>

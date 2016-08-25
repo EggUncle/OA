@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context="rixin.app.officeauto.activity.ClearActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_title_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/btn_ac_ed_back"
+            android:layout_width="@dimen/ac_edit_information_btn_back_size"
+            android:layout_height="@dimen/ac_edit_information_btn_back_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/firstenter_3_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/clear"
+            android:textSize="@dimen/ac_edit_information_title_font_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/clear_date"
+            />
+
+        <TextView
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_sex"
+            />
+
+        <ImageView
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_book_wodebumen_enter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:text="@string/clear_chat"
+            />
+
+        <TextView
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ac_edit_information_font_size"
+            android:id="@+id/tv_ed_information_birthday"
+            />
+        <ImageView
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_book_wodebumen_enter"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        ></View>
+
+</LinearLayout>

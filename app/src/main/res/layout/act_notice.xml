@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    tools:context="rixin.app.officeauto.activity.NoticeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_title_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/btn_ac_notice_back"
+            android:layout_width="@dimen/ac_edit_information_btn_back_size"
+            android:layout_height="@dimen/ac_edit_information_btn_back_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/firstenter_3_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/notice"
+            android:textSize="@dimen/ac_edit_information_title_font_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/notice"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/had_on"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/ac_edit_information_padding_iv"
+            android:src="@drawable/contact_book_wodebumen_enter" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/information"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_notice_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/voice"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_notice_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/vibration"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_notice_vibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/group_vibration"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_notice_group_vibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_space_height"
+        android:orientation="vertical" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ac_edit_information_information_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:text="@string/quiet"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/ac_edit_information_padding_tv"
+            android:textSize="@dimen/ac_edit_information_font_size" />
+
+        <Switch
+            android:id="@+id/sw_notice_quiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:paddingTop="3dp"
+        android:gravity="center"
+        android:textSize="@dimen/ac_notice_quiet_about_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiet_about"
+        />
+
+</LinearLayout>
